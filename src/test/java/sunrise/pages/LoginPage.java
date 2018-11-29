@@ -12,6 +12,8 @@ public class LoginPage extends PageObject {
     private WebElementFacade passwordInput;
     @FindBy(id = "login_submit")
     private WebElementFacade signInButton;
+    @FindBy(xpath = "//*[contains(@value,'Create')]")
+    private WebElementFacade createAccountButton;
 
 
     public void typeLogin(final String login) {
@@ -26,5 +28,8 @@ public class LoginPage extends PageObject {
         signInButton.click();
     }
 
+    public void clickOnCreateAccount() {
+        createAccountButton.click();
+    }
 
 }
